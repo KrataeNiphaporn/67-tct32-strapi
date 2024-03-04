@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rooms",
+  "info": {
+    "singularName": "room",
+    "pluralName": "rooms",
+    "displayName": "Room",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "subjects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::subject.subject",
+      "mappedBy": "room"
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "students": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::student.student",
+      "inversedBy": "rooms"
+    },
+    "classrooms": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::classroom.classroom",
+      "inversedBy": "rooms"
+    }
+  }
+}
