@@ -23,11 +23,6 @@
       "minLength": 10,
       "maxLength": 10
     },
-    "mobileHash": {
-      "type": "string",
-      "unique": true,
-      "hidden": true
-    },
     "classrooms": {
       "type": "relation",
       "relation": "manyToMany",
