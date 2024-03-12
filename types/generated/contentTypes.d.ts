@@ -786,7 +786,7 @@ export interface ApiClassroomClassroom extends Schema.CollectionType {
   info: {
     singularName: 'classroom';
     pluralName: 'classrooms';
-    displayName: 'classroom';
+    displayName: 'class';
     description: '';
   };
   options: {
